@@ -54,6 +54,7 @@ Some tokens only demand simple expressiones ("token"). In the next table are the
 |False|"false"\|"False"|
 |True|"true"\|"True"|
 |Alphabetical|[A-Za-z]+|	
+
 There is a total of 38 different tokens. Of those, 30 are simple of the form "token".
 
 ## Prerequisites <a name="Prerequisites"></a>
