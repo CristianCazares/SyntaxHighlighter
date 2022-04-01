@@ -1,6 +1,7 @@
 # Syntax Highlighter C++
 
-**Description**: This is a syntax highlighter for **Windows** written on **C++** using regular expressions powered by **Flex** to identify tokens on a text file. <br>
+### Description
+This is a syntax highlighter for **Windows** written on **C++** using regular expressions powered by **Flex** to identify tokens on a text file. <br>
 Executing the file "**a.exe**" reads an input file ("input.txt") and detects different keywords that are sort of shared across C++, Python and MatLab. <br>
 After that, it generates an HTML file ("index.html"), this file is the result of highlighting the input file.
 The styles are predefined on a CSS file and is strictly related to the tokens coded con C++/FLEX.
