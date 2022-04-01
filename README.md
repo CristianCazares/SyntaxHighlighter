@@ -1,7 +1,7 @@
 # Syntax Highlighter C++
 
-**Description**: This is a syntax highlighter for Windows written on C++ using regular expressions powered by FLEX to identify tokens on a text file.
-Executing the file "**a.exe**" takes an input file ("input.txt") and detects different keywords that are sort of shared across C++, Python and MatLab.
+**Description**: This is a syntax highlighter for **Windows** written on **C++** using regular expressions powered by **Flef** to identify tokens on a text file. <br>
+Executing the file "**a.exe**" reads an input file ("input.txt") and detects different keywords that are sort of shared across C++, Python and MatLab. <br>
 After that, it generates an HTML file ("index.html"), this file is the result of highlighting the input file.
 The styles are predefined on a CSS file and is strictly related to the tokens coded con C++/FLEX.
 
@@ -12,7 +12,7 @@ This is a walkthrough of my entire project. If you want to start developing, you
 ## Table of contents
 * [Selected languages](#SelectedLanguages)
 * [Regular expressions](#RegularExpressions)
-* [Target tokens](#TargetTkens)
+* [Target tokens](#TargetTokens)
 * [Prerequisites ](#Prerequisites)
 	* [Flex / Lex & Yacc](#FlexLexYacc)
 	* [Things to install](#ToInstall)
@@ -62,7 +62,7 @@ The equivalent for Windows is **Flex** and Bison. For the purpose of this projec
 
 This part was the most difficult on my experience, because the compiler that I was using was having some troubles with Flex and missing some files. In my experience this is what worked best:
 
-### Things to install <a name="Things to install"></a>
+### Things to install <a name="ToInstall"></a>
 #### MinGW-w64 <a name="MinGW-w64"></a>
 The compiler that I used is g++, which is part of the **MinGW-w64** project.
 You can find the official installer on the section of **Mingw-builds>Souforge** of [this page](https://www.mingw-w64.org/downloads/#mingw-builds).
