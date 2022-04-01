@@ -1,17 +1,27 @@
 # Syntax Highlighter C++
 
-## Table of contents
+**Description**: This is a syntax highlighter for Windows written on C++ using regular expressions powered by FLEX to identify tokens on a text file.
+Executing the file "**a.exe**" takes an input file ("input.txt") and detects different keywords that are sort of shared across C++, Python and MatLab.
+After that, it generates an HTML file ("index.html"), this file is the result of highlighting the input file.
+The styles are predefined on a CSS file and is strictly related to the tokens coded con C++/FLEX.
 
+## Author: Cristian Javier Cázares Molina
+
+This is a walkthrough of my entire project. If you want to start developing, you can simply jump to the section of [Prerequsites](#Prerequisites). 
+
+## Table of contents
 * [Selected languages](#SelectedLanguages)
 * [Regular expressions](#RegularExpressions)
 * [Target tokens](#TargetTkens)
 * [Prerequisites ](#Prerequisites)
 	* [Flex / Lex & Yacc](#FlexLexYacc)
-	* [MinGW-w64](#MinGW-w64)
-	* [GnuWin32](#GnuWin32)
+	* [Things to install](#ToInstall)
+		* [MinGW-w64](#MinGW-w64)
+		* [GnuWin32](#GnuWin32)
 * [Code development](#CodeDevelopment)
 	* [C++](#CSS) 
 	* [HTML + CSS](#HTMLCSS) 
+	* [How to add a new token?](#NewToken) 
 * [Compiling](#Compiling)
 	* [Commands for compiling (Windows CMD)](#CommandsCMD)
 * [Execution](#Execution)
@@ -19,12 +29,12 @@
 
 
 
-## Author: Cristian Javier Cázares Molina
+
 
 ## Selected languages <a name="SelectedLanguages"></a>
 
 **C++, Python y Matlab.**
-This highlighter is looking for some keywords that are (kind of) shared between three coding languages from different families.
+The program is looking for some keywords that are (kind of) shared between three coding languages from different families.
 There is no doubt that Python and C++ are from different families. On the other hand, MatLab has lots of expressions based on C, nevertheless it also has pretty particular differences, such as "function" to declare functions.
 
 ## Target tokens <a name="TargetTokens"></a>
@@ -34,7 +44,7 @@ Also, I include a column for some posible examples and another one for related a
 
 ## Regular expressions <a name="RegularExpressions"></a>
 Some tokens only demand simple expressiones ("token"). In the next table are the more -sort of- complex tokens:
-|Token|Regular Expression  |
+|Token|Regular Expression|
 |--|--|
 |Real Numbers|[-]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?|
 |Quotations|(\\/\\/)(.*)\|#[^include].\*|
@@ -47,13 +57,26 @@ There is a total of 38 different tokens. Of those, 30 are simple of the form "to
 
 ## Prerequisites <a name="Prerequisites"></a>
 ### Flex / Lex & Yacc <a name="FlexLexYacc"></a>
-### MinGW-w64 <a name="MinGW-w64"></a>
-### GnuWin32 <a name="GnuWin32"></a>
+The most fundamental part of the program is the lexer analyser. The go-to lexer when developing on C++ is Lex & Yacc. However, this is only available on Unix systems.
+The equivalent for Windows is **Flex** and Bison. For the purpose of this project, we will only be needing **Flex**
+
+This part was the most difficult on my experience, because the compiler that I was using was having some troubles with Flex and missing some files. In my experience this is what worked best:
+
+### Things to install <a name="Things to install"></a>
+#### MinGW-w64 <a name="MinGW-w64"></a>
+The compiler that I used is g++, which is part of the **MinGW-w64** project.
+You can find the official installer on the section of **Mingw-builds>Souforge** of [this page](https://www.mingw-w64.org/downloads/#mingw-builds).
+
+**If you already have a C++ compiler** on you system, you can skip this. In event of problems, reinstalling this compiler could work.
+
+For some reason, that installer had issues on my computer (64bit). If this is your case try downloading [this MinGW build (x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/).
+
+#### GnuWin32: Flex <a name="GnuWin32"></a>
 
 ## Code development <a name="CodeDevelopment"></a>
 ### C++ <a name="C++"></a>
 ### HTML + CSS <a name="HTMLCSS"></a>
-
+### How to add a new token?<a name="NewToken"></a>
 ## Compiling <a name="Compiling"></a>
 ### Commands for compiling (Windows CMD) <a name="CommandsCMD"></a>
 
