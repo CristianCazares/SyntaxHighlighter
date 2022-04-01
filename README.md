@@ -84,13 +84,13 @@ Both of them contain a folder called "bin". That is the folder that must be adde
 #### Here I have some steps onf how to do that. If you already know, jump to (Code development)[#CodeDevelopment]
 
 1. Press the Windows Key and search "Edit the System Environment Variables".
-![AddPath1](./img/AddPath1.png)
+<br><img src="./img/AddPath1.png" alt="AddPath1.png" width="300"/>
 2. Go to "Envirnoment Variables...". This is going to open a new window.
-![AddPath2](./img/AddPath2.png)
+<br><img src="./img/AddPath2.png" alt="AddPath2.png" width="300"/>
 3. From the User Variables (the list on the top) double click on "Path". This is going to open a new window.
-![AddPath3](./img/AddPath3.png)
+<br><img src="./img/AddPath3.png" alt="AddPath3.png" width="300"/>
 4. Now click on "Browse" go to where you have the MinGW look for a folder called "bin" and click "ok"
-![AddPath4](./img/AddPath4.png)
+<br><img src="./img/AddPath4.png" alt="AddPath4.png" width="300"/>
 5. Do the same thing with the "bin" folder of GnuWin32.
 
 
