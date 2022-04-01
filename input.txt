@@ -1,0 +1,58 @@
+//GENERAL EXAMPLE (mostly python)
+import time
+
+def checkEven(var):
+	if var % 2 == 0:
+		return true;
+	else:
+		return false;
+
+a = None
+#Keep asking for number until there is no zero division
+while(not type(a) == float):
+	d = input("Distance: ");
+	t = input("Time:");
+	if not (type(d) == int and type(t) == int ):
+		print('Next time input an integer please!');
+		break;
+	try:
+		a = int(d)/int(t);
+	except:
+		print("ZERO DIVISION!!! Try again... \n");
+
+
+//Complementary example
+#include<iostream>
+#include<vector>
+#As long as "#" is not followed by "include", it still remain a python comment
+
+//Function to check the area of a triangle is even
+bool triangleEven(float height, float base){
+	float area = (height * base)/2;
+	if(area % 2 == 0){
+		return true;
+	}else if(area == 0){
+		askDimensions(1);
+	}
+	return false;
+}
+
+vector<float> dimensions;
+void askDimensions(int times){ //Ask for dimensions many times
+	for (int i = 0; i < times; int++){
+		cout << "Height: "; cin >> dimensions.push();
+		cout << "Base: "; cin >> dimensions.push();
+	}
+}
+
+
+
+
+//Othert tests
+string operators = "this are operators: + - * / ^ %";
+string integers = "this are integers: 1 2 3 4 5";
+double protonVolume= 2.5E-45; //in cubic meters
+double force = -.25; //newtons
+double constant = -685.23e-7;
+
+double answer = (force^2)/constant * protonVolume;//GENERAL EXAMPLE (mostly python)

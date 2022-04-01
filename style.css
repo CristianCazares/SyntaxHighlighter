@@ -1,0 +1,82 @@
+pre{
+    display: inline;
+    margin: 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body{
+    font-family: monospace;
+    font-size: 2vh;
+    background-color: #272822;
+}
+
+
+.noBreak{
+    display: inline;
+}
+
+.import{
+    color: #BF9000;
+}
+
+.def, .void, .function{
+    color: #FFD966;
+}
+
+.if, .else, .for, .while{
+    color: #4472C4;
+}
+
+.real, .true, .false{
+    color: #A87DF5;
+}
+
+.operator, .not{
+    color: #A7E32E;
+}
+
+.int, .string, .float, .double, .bool, .vector, .none{
+    color: #66D9EF;
+}
+
+.assignation{
+    color: #EB266D;
+}
+
+.parenthesis, .bracket, .brace{
+    color: #eb7526;
+}
+
+.return{
+    color: #EFA591;
+}
+
+.semicolon{
+    color: #C00000;
+}
+
+.break{
+    color: #CD7CD6;
+}
+
+.try, .except{
+    color: #57CB47
+}
+
+.quotation{
+    color: #D5CB6D;
+}
+
+.comment{
+    color: #515347;
+}
+
+
+
+
+
+
+
+.default, .alpha{
+    color: #F8F8F2;
+}
