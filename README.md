@@ -63,17 +63,29 @@ The equivalent for Windows is **Flex** and Bison. For the purpose of this projec
 This part was the most difficult on my experience, because the compiler that I was using was having some troubles with Flex and missing some files. In my experience this is what worked best:
 
 ### Things to install <a name="ToInstall"></a>
+#### Be aware of the location of every installation. You are going to need the,
 #### MinGW-w64 <a name="MinGW-w64"></a>
 The compiler that I used is g++, which is part of the **MinGW-w64** project.
 You can find the official installer on the section of **Mingw-builds>Souforge** of [this page](https://www.mingw-w64.org/downloads/#mingw-builds).<br>
 
 **If you already have a C++ compiler** on your system, you can skip this ([jump to next](#GenuWin32)). In event of problems with your compiler, reinstalling the after mention one might work.
 
-For some reason, that installer had issues on my computer (64bit). If this is your case try downloading [this MinGW build (x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/).
+For some reason, that installer had issues on my computer (64bit). If this is your case try downloading [this MinGW build (x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/). Just uncompress it and move the folder to a general directorie, such as C:\ or C:\Program Files.
 
 #### GnuWin32: Flex <a name="GnuWin32"></a>
-Flex is part of the GnuWin32 project, which is a set of open source tool for C and C++.<br>
+Flex is part of the GnuWin32 project, which is a set of open source tools for C and C++.<br>
 I recommend installing the full [Set Up from here](http://gnuwin32.sourceforge.net/packages/flex.htm). 
+
+### Add MinGW and GnuWin32 to PATH
+In order to use Flex and g++ everywhere through console, you must add them to PATH. <br>
+Both of them contain a folder called "bin". That is the folder that must be added to PATH.
+
+1. Press the Windows Key and search "Edit the System Environment Variables".
+2. Go to "Envirnoment Variables...". This is going to open a new window.
+3. From the User Variables (the list on the top) double click on "Path". This is going to open a new window.
+4. Now click on "Browse" go to where you have the MinGW look for a folder called "bin" and click "ok"
+5. Do the same thing with the "bin" folder of GnuWin32.
+
 
 ## Code development <a name="CodeDevelopment"></a>
 ### C++ <a name="C++"></a>
