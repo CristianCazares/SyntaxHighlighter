@@ -12,8 +12,8 @@ This is a walkthrough of my entire project. If you want to start developing, you
 
 ## Table of contents
 * [Selected languages](#SelectedLanguages)
-* [Regular expressions](#RegularExpressions)
 * [Target tokens](#TargetTokens)
+* [Regular expressions](#RegularExpressions)
 * [Prerequisites ](#Prerequisites)
 	* [Flex / Lex & Yacc](#FlexLexYacc)
 	* [Things to install](#ToInstall)
