@@ -81,6 +81,8 @@ I recommend installing the full [Set Up from here](http://gnuwin32.sourceforge.n
 In order to use Flex and g++ everywhere through console, you must add them to PATH. <br>
 Both of them contain a folder called "bin". That is the folder that must be added to PATH.
 
+#### Here I have some steps onf how to do that. If you already know, jump to (Code development)[#CodeDevelopment]
+
 1. Press the Windows Key and search "Edit the System Environment Variables".
 ![AddPath1](./img/AddPath1.png)
 2. Go to "Envirnoment Variables...". This is going to open a new window.
