@@ -1,4 +1,4 @@
-![](Aspose.Words.eea4a2ed-b365-47c8-bee2-44560137d1cb.001.png)
+![](TecLogo.png)
 
 
 |<p>**Nombre**:</p><p>Cristian Javier Cázares Molina</p>|<p>**Matrícula:**</p><p>A01741952</p>|
