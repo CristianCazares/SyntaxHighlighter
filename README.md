@@ -41,7 +41,7 @@ There is no doubt that Python and C++ are from different families. On the other 
 ## Target tokens <a name="TargetTokens"></a>
 After comparing the shared reserved keywords across languages, in the next table I illustrate the principal tokens categories and the highlight color selected.<br>
 Also, I include a column for some posible examples and another one for related and/or extra tokens.
-![Token table](https://raw.githubusercontent.com/CristianCazares/SyntaxHighlighter/main/TokenTable.png)
+![Token table](./img/TokenTable.png)
 
 ## Regular expressions <a name="RegularExpressions"></a>
 Some tokens only demand simple expressiones ("token"). In the next table are the more -sort of- complex tokens:
@@ -82,9 +82,13 @@ In order to use Flex and g++ everywhere through console, you must add them to PA
 Both of them contain a folder called "bin". That is the folder that must be added to PATH.
 
 1. Press the Windows Key and search "Edit the System Environment Variables".
+![AddPath1](./img/AddPath1.png)
 2. Go to "Envirnoment Variables...". This is going to open a new window.
+![AddPath1](./img/AddPath2.png)
 3. From the User Variables (the list on the top) double click on "Path". This is going to open a new window.
+![AddPath1](./img/AddPath3.png)
 4. Now click on "Browse" go to where you have the MinGW look for a folder called "bin" and click "ok"
+![AddPath1](./img/AddPath4.png)
 5. Do the same thing with the "bin" folder of GnuWin32.
 
 
