@@ -6,10 +6,6 @@ Executing the file "**a.exe**" reads an input file ("input.txt") and detects dif
 After that, it generates an HTML file ("index.html"), this file is the result of highlighting the input file.
 The styles are predefined on a CSS file and is strictly related to the tokens coded con C++/FLEX.
 
-### Example:
-#### Input file: [input.txt](https://cristiancazares.github.io/SyntaxHighlighter/input.txt)
-#### Syntax highlighted: [Here](https://cristiancazares.github.io/SyntaxHighlighter/)
-
 ## Author: Cristian Javier Cázares Molina
 
 This is a walkthrough of my entire project. If you want to start developing, you can simply jump to the section of [Prerequsites](#Prerequisites). 
