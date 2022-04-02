@@ -22,7 +22,7 @@ This is a walkthrough of my entire project. If you want to start developing, you
 * [Code development](#CodeDevelopment)
 	* [C++](#CSS) 
 	* [HTML + CSS](#HTMLCSS) 
-	* [How to add a new token?](#NewToken) 
+* [How to add a new token?](#NewToken) 
 * [Compiling](#Compiling)
 	* [Commands for compiling (Windows CMD)](#CommandsCMD)
 * [Execution](#Execution)
@@ -92,13 +92,59 @@ Both of them contain a folder called "bin". That is the folder that must be adde
 <br><img src="./img/AddPath3.png" alt="AddPath3.png" width="300"/>
 4. Now click on "Browse" go to where you have the MinGW look for a folder called "bin" and click "ok"
 <br><img src="./img/AddPath4.png" alt="AddPath4.png" width="300"/>
+<br><img src="./img/AddPath4-2.png" alt="AddPath4-2.png" width="300"/>
 5. Do the same thing with the "bin" folder of GnuWin32.
 
 
 ## Code development <a name="CodeDevelopment"></a>
 ### C++ <a name="C++"></a>
+In order to use Flex, it is necessary to create a ".l" extension file, this allows us to write both C++ code and regular expressions. <br>
+This type of files most follows an specific structure:
+```
+%{
+Declaraciones en C++
+%}
+TOKEN						Regular Expression
+%%
+{TOKEN}+/Regular Expression	C++ code
+%%
+Regular C++ code
+```
+#### Basic example: read an input file.
+```
+%{
+#include<iostream>
+using namsepace std;
+%}
+ALPHA [A-Za-z]+
+%%
+{ALPHA}+	cout << "Alphabetical";
+"+"			cout << "Plus";
+.			cout << "Unknown token";
+%%
+const  char  *fileName =  "input.txt";
+int  main(int  argc, char**  argv){
+	//Read file
+	FILE *inputFile = fopen(fileName, "r");
+	if(!inputFile){
+		cout << "THE FILE " << fileName << " could not be opened!";
+		return 0;
+	}
+	//Send file to flex
+	yyin = inputFile;
+	while(yylex());
+	fclose(inputFile);
+	//write html
+	writeHTML();
+	return 0;
+}
+```
+
+
 ### HTML + CSS <a name="HTMLCSS"></a>
-### How to add a new token?<a name="NewTokens"></a>
+
+
+## How to add a new token?<a name="NewTokens"></a>
 ## Compiling <a name="Compiling"></a>
 ### Commands for compiling (Windows CMD) <a name="CommandsCMD"></a>
 
