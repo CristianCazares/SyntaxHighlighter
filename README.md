@@ -107,7 +107,7 @@ C++ declarations
 %}
 TOKEN				Regular Expression
 %%
-{TOKEN}+/Regular 	Expression	C++ code
+{TOKEN}+/Regular 	Expression C++ code
 %%
 Regular C++ code
 ```
@@ -117,12 +117,12 @@ Regular C++ code
 #include<iostream>
 using namsepace std;
 %}
-ALPHA [A-Za-z]+
+ALPHA	[A-Za-z]+
 %option noyywrap
 %%
 {ALPHA}+	cout << "Alphabetical";
-"+"			cout << "Plus";
-.			cout << "Unknown token";
+"+"		cout << "Plus";
+.		cout << "Unknown token";
 %%
 const  char  *fileName =  "input.txt";
 int  main(int  argc, char**  argv){
