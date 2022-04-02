@@ -105,7 +105,7 @@ This type of files most follows an specific structure:
 %{
 C++ declarations
 %}
-TOKEN				Regular Expression
+TOKEN			Regular Expression
 %%
 {TOKEN}+/Regular 	Expression C++ code
 %%
@@ -115,15 +115,19 @@ Regular C++ code
 ```c++
 %{
 #include<iostream>
-using namsepace std;
+using namespace std;
+extern int yylex();
+
 %}
 ALPHA	[A-Za-z]+
+
 %option noyywrap
 %%
-{ALPHA}+	cout << "Alphabetical";
-"+"		cout << "Plus";
-.		cout << "Unknown token";
+{ALPHA}+	cout << "Alphabetical\n";
+"+"		cout << "Plus\n";
+.		cout << "Unknown token\n";
 %%
+
 const  char  *fileName =  "input.txt";
 int  main(int  argc, char**  argv){
 	//Read file
@@ -136,8 +140,6 @@ int  main(int  argc, char**  argv){
 	yyin = inputFile;
 	while(yylex());
 	fclose(inputFile);
-	//write html
-	writeHTML();
 	return 0;
 }
 ```
