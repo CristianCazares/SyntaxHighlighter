@@ -22,6 +22,7 @@ This is a walkthrough of my entire project. If you want to start developing, you
 * [Code development](#CodeDevelopment)
 	* [C++](#CSS) 
 		* [Basic example: read an input file.](#BasicExample)
+		* [Highlighting process](#Highlighting)
 	* [HTML + CSS](#HTMLCSS) 
 * [How to add a new token?](#NewToken) 
 * [Compiling](#Compiling)
