@@ -105,9 +105,9 @@ This type of files most follows an specific structure:
 %{
 C++ declarations
 %}
-TOKEN						Regular Expression
+TOKEN				Regular Expression
 %%
-{TOKEN}+/Regular Expression	C++ code
+{TOKEN}+/Regular 	Expression	C++ code
 %%
 Regular C++ code
 ```
