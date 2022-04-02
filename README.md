@@ -21,6 +21,7 @@ This is a walkthrough of my entire project. If you want to start developing, you
 		* [GnuWin32](#GnuWin32)
 * [Code development](#CodeDevelopment)
 	* [C++](#CSS) 
+		* [Basic example: read an input file.](#BasicExample)
 	* [HTML + CSS](#HTMLCSS) 
 * [How to add a new token?](#NewToken) 
 * [Compiling](#Compiling)
@@ -102,7 +103,7 @@ In order to use Flex, it is necessary to create a ".l" extension file, this allo
 This type of files most follows an specific structure:
 ```
 %{
-Declaraciones en C++
+C++ declarations
 %}
 TOKEN						Regular Expression
 %%
@@ -110,13 +111,14 @@ TOKEN						Regular Expression
 %%
 Regular C++ code
 ```
-#### Basic example: read an input file.
-```
+#### Basic example: read an input file. <a name="BasicExample"></a>
+```c++
 %{
 #include<iostream>
 using namsepace std;
 %}
 ALPHA [A-Za-z]+
+%option noyywrap
 %%
 {ALPHA}+	cout << "Alphabetical";
 "+"			cout << "Plus";
