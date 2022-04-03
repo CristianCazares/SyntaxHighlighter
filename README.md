@@ -145,6 +145,26 @@ int  main(int  argc, char**  argv){
 }
 ```
 
+Let's highlight some importat parts.
+In order to use a token from the second section, there must be a "{TOKEN+}" on the third secion. As you can see with "ALPHA" in the example.
+```c++
+%}
+ALPHA	[A-Za-z]+
+%%
+{ALPHA}+	cout << "Alphabetical -> " << yytext << endl;
+%%
+```
+
+In order to use the text that triggered a token, use "yytext".
+```c++
+%%
+{ALPHA}+	cout << "Alphabetical -> " << yytext << endl;
+"+"		cout << "Plus -> " << yytext[0] << endl;
+.		cout << "Unknown token -> " << yytext[0] << endl;
+%%
+```
+
+As you can see, "yytext" is what a token has accumulated. "yytext" is used for tokens that normally detects full strings, "yytext[0]" is for single characters, such as "+" token. 
 
 ### HTML + CSS <a name="HTMLCSS"></a>
 
