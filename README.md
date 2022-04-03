@@ -101,7 +101,7 @@ Both of them contain a folder called "bin". That is the folder that must be adde
 ## Code development <a name="CodeDevelopment"></a>
 ### C++ <a name="C++"></a>
 In order to use Flex, it is necessary to create a ".l" extension file, this allows us to write both C++ code and regular expressions. <br>
-This type of files most follows an specific structure:
+This type of files must follow an specific structure:
 ```
 %{
 C++ declarations
@@ -124,9 +124,9 @@ ALPHA	[A-Za-z]+
 
 %option noyywrap
 %%
-{ALPHA}+	cout << "Alphabetical\n";
-"+"		cout << "Plus\n";
-.		cout << "Unknown token\n";
+{ALPHA}+	cout << "Alphabetical -> " << yytext << endl;
+"+"		cout << "Plus -> " << yytext[0] << endl;
+.		cout << "Unknown token -> " << yytext[0] << endl;
 %%
 
 const  char  *fileName =  "input.txt";
@@ -141,7 +141,7 @@ int  main(int  argc, char**  argv){
 	yyin = inputFile;
 	while(yylex());
 	fclose(inputFile);
-	return 0;
+	return 0;	
 }
 ```
 
