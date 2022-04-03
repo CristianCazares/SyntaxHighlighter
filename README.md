@@ -145,7 +145,7 @@ int  main(int  argc, char**  argv){
 }
 ```
 
-Let's highlight some importat parts.
+Let's highlight some importat parts.<br>
 In order to use a token from the second section, there must be a "{TOKEN+}" on the third secion. As you can see with "ALPHA" in the example.
 ```c++
 %}
